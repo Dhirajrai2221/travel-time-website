@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --c1: #0172ba;
+  --c2: #089247;
+  --c3: #ecf7fe;
+  --c4: #ceecfe;
+}
+
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+  font-family: sans-serif;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ------ Header -------- */
+header {
+  height: 100px;
+  display: grid;
+  padding: 0 4%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.logo-wrapper {
+  align-self: center;
+}
+
+.btn-wrapper {
+  justify-self: end;
+  align-self: center;
+}
+
+.btn {
+  background-color: var(--c1);
+  padding: 10px 20px;
+  border-radius: 10rem;
+  color: var(--white);
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--c2);
+  transform: translateY(-6px);
+}
+.btn:active {
+  transform: translateY(3px);
+}
+
+/* -------- Nav ---------- */
+nav {
+  background-color: var(--c3);
+  border-top: 2px solid var(--c1);
+  border-bottom: 2px solid var(--c1);
+  height: 90px;
+  width: 100%;
+
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+
+nav ul {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+nav ul li a {
+  border: 2.5px solid var(--c1);
+  padding: 10px 20px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  background-color: var(--white);
+  color: var(--c1);
+
+  transition: all 0.2s;
+}
+nav ul li a:hover {
+  background-color: var(--c3);
+  transform: scale(1.05);
+}
+
+/* -------- main ------------- */
+
+.main-section {
+  display: grid;
+  grid-template-columns: 240px 1fr 200px;
+  gap: 24px;
+
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-block: 20px;
+}
+
+.canoeing-des {
+  margin-bottom: 20px;
+}
+
+.canoeing-types ul {
+  margin-left: 20px;
+}
+
+.heading-secondary {
+  background-color: var(--c1);
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.hiking-des-1 {
+  margin-bottom: 10px;
+}
+
+.hiking-des-1 img {
+  float: left;
+  margin-right: 16px;
+}
+
+.hiking-des-2 {
+  margin-bottom: 16px;
+}
+
+.hiking-des-2 img {
+  float: right;
+  margin-left: 16px;
+}
+
+.hiking-des-2 p::first-letter {
+  margin-left: 166px;
+}
+
+.aside img:first-child {
+  margin-bottom: 50px;
+}
+
+.trails-section {
+  width: 95%;
+  margin-inline: auto;
+  background-color: var(--c4);
+  border: 2px solid #ababab;
+  padding: 5px 30px 30px;
+}
+
+.trails-section h3 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.trails-wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.trails-wrapper h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.trails-wrapper ul {
+  padding-left: 20px;
+}
+
+.trails-wrapper div:first-child {
+  border-right: 2px solid #ababab;
+  padding-right: 20px;
+}
+
+/*------- Gallary -------- */
+
+.gallery-section {
+  scroll-margin-block: 100px;
+}
+
+.gallery-cards-container {
+  padding-block: 20px;
+  max-width: 1440px;
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.gallery-card {
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+}
+
+.gallery-card img {
+  max-width: 100%;
+  transition: transform 0.3s;
+}
+
+.gallery-card img:hover {
+  transform: scale(120%);
+}
+
+.credits-section {
+  border-top: 2px solid var(--c1);
+  border-bottom: 2px solid var(--c1);
+  max-width: 1460px;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.credits-section h4 {
+  font-size: 15px;
+  text-align: center;
+}
+
+.credits-section p {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/*------------- Footer ------------- */
+footer {
+  background-image: url(./images/newhampshire.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-inline: 4%;
+  padding-block: 32px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 20% 1fr 20%;
+}
+
+.footer-links-wrapper h3 {
+  font-size: 16px;
+  border-bottom: 2px solid var(--c1);
+}
+
+.footer-links-wrapper ul {
+  list-style: none;
+}
+
+.footer-links-wrapper ul li a {
+  color: var(--black);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-links-wrapper ul li a:hover {
+  transform: translateX(5px);
+}
+
+.footer-links-wrapper-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.social-links-section {
+  justify-self: center;
+  padding-top: 80px;
+}
+
+.social-links-section h3 {
+  color: var(--c1);
+  font-size: 24px;
+  text-align: center;
+}
+
+.social-links-container {
+  display: flex;
+  gap: 5px;
+}
+
+.social-links-container img {
+  transition: transform 0.3s;
+}
+
+.social-links-container img:hover {
+  transform: scale(1.15) rotate(15deg);
+}
+
+@media screen and (max-width: 1300px) {
+  .credits-section,
+  .gallery-cards-container,
+  .main-section {
+    padding-inline: 20px;
+  }
+
+  header {
+    padding-inline: 2%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .aside img {
+    max-width: 100%;
+  }
+
+  .main-section {
+    grid-template-columns: 1fr 200px;
+    align-items: start;
+  }
+
+  .aside {
+    grid-row: 1;
+    grid-column: 2 / 3;
+  }
+
+  .hiking-section {
+    grid-column: 1 / -1;
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-section {
+    grid-template-columns: 1fr;
+  }
+
+  .aside {
+    grid-row: auto;
+    grid-column: auto;
+    justify-self: center;
+  }
+
+  .hiking-section {
+    grid-column: auto;
+  }
+  .aside img:first-child {
+    margin-bottom: 20px;
+  }
+
+  nav {
+    height: auto;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .social-links-section {
+    justify-self: start;
+    padding-top: 0;
+  }
+
+  .social-links-section h3 {
+    text-align: start;
+  }
+
+  .footer-links-wrapper-right {
+    gap: 30px;
+  }
+
+  .hiking-des-2 p::first-letter {
+    margin-left: 0px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .trails-wrapper h4 {
+    font-size: 16px;
+  }
+
+  .trails-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .trails-wrapper div:first-child {
+    border: none;
+    padding-right: 0px;
+  }
+}
